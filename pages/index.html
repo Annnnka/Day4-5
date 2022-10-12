@@ -3,25 +3,83 @@
     <head>
         <link rel="stylesheet" type="text/css" href="../style/main.css">
         <meta charset="utf-8">
+        <script href="../js/js.js"></script>
+        <title>Государственный Эрмитаж</title>
+        
     </head>
     <body>
+        
         <header>
         <div class="head_logoname">
-                <div class="menu_icon"><a href="#"><img src=""></a></div>	
+                <div class="logo"><a href="../pages/index.html">
+                    <img src="../img/logo2.png" style="height:10vw; width: 10vw; margin-left: 30px ; position: relative;">
+                    <img src="../img/logo.png"></a></div>	
             </div>
         </header>
-        <nav id="menu_vert">
+        <main>
+        <input type="checkbox" id="nav-toggle" hidden>
+        <nav class="nav">
+            <label for="nav-toggle" class="nav-toggle" onclick></label>
+            <h2 class="logo"> 
+                <a href="../pages/index.html">Современное искусство</a> 
+            </h2>
             <ul>
-                <li><a href="../pages/index.html"><div class="menu_img"><img src="../img/3.png"></div><span>Главная</span></a></li>
-                <li><a href="#"><div class="menu_img"><img src="../img/1.png"></div><span>История<br>предприятия</span></a></li>
-                <li><a href="#"><div class="menu_img"><img src="../img/2.png"></div><span>Фото и видео</span></a></li>
-                <li><a href="#"><div class="menu_img"><img src="../img/3.png"></div><span>Контакты</span></a></li>  
-                <li><a href="#"><div class="menu_img"><img src="../img/2.png"></div><span>О нас</span></a></li>
+                <li><a href="#1">Галерея</a>
+                <li><a href="#2">История</a>
+                <li><a href="#3">О нас</a>
+                <li><a href="#4">Контакты</a> 
             </ul>
-        </nav>
+        </nav>     
+       
+            <div class="registration-cssave">
+                <div class="img_pr"><img src="../img/erm.jpg"></div>
+                <form>
+                    <h3 class="text-center">Форма входа</h3>
+                    <div class="form-group">
+                        <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="Логин" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control item" type="password" name="Пароль" minlength="6" id="password" placeholder="Пароль" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block create-account" type="submit">Вход в аккаунт</button>
+                    </div>
+                    <div class="weather">
+<a target="_blank" href="https://nochi.com/weather/saint-petersburg-18398"><img src="https://w.bookcdn.com/weather/picture/32_18398_1_20_34495e_250_2c3e50_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=589&anc_id=83790"  alt="booked.net"/></a>               
+</div>
+                </form>
+            </div>
+            
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5364131514439!2d30.31237101572716!3d59.93983436896464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310b32cbe2e9%3A0x74e032aa0505dfc!2z0JPQvtGB0YPQtNCw0YDRgdGC0LLQtdC90L3Ri9C5INCt0YDQvNC40YLQsNC2!5e0!3m2!1sru!2sru!4v1665467291896!5m2!1sru!2sru"></iframe>
+            <h1 >Наши адреса:</h1>
+            <ul class="adress">
+                <li>Главный музейный комплекс — Дворцовая пл., 2;</li>
+                <li>Зимний дворец Петра I — Дворцовая наб., 32;</li>
+                <li> Генеральный штаб — Дворцовая пл., 1;</li>
+                <li>Дворец Меншикова — Университетская наб., 15;</li>
+                <li> Музей Императорского фарфорового завода — пр. Обуховской обороны, 151;</li>
+                <li>Реставрационно-хранительский центр «Старая деревня» — Заусадебная улица, 37 А.</li>
+            </ul>
+     <table>
+        <tr>
+            <th>Входные билеты</th>
+            <th>Экскурсии</th>
+            <th>Лекции</th>
+            <th>Арт-медитации</th>
+        </tr>
+        <tr>
+            <td><img class="erm" src="../img/er1.jpg"></td>
+            <td><img class="erm" src="../img/er2.jpg"></td>
+            <td><img class="erm" src="../img/er4.jpg"></td>
+            <td><img class="erm" src="../img/er3.jpg"></td>
+        </tr>
+     </table>
+        </main>
+
         <footer>
         </footer>
-            
+   
         
     </body>
 </html>

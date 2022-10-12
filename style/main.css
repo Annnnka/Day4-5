@@ -1,124 +1,254 @@
-body{
-	
+html, body{
+	height: 100%;
 	font-family: "Roboto", sans-serif, Helvetica, Arial;
 	margin: 0;
+    background-position: center top;
+    background-attachment: fixed;
+    
 }
 
 
 .head_logoname{
 	background-color: #fff;
-	min-height: 90px;
+	min-height:120px;
 	width: 100%;
 	margin: 0;
     left: 0;
     right: 0;
 	box-shadow: 0 1px 3px 0 #888;
-	position: fixed;
+	position: relative;
 	display: inline-flex;
+    z-index: 2000;
+    
 }
-
-.menu_icon img{
-	height: 66px;
-	margin-top: 7px;
-	padding: 0 0 3 16px;
+.logo img{
+    width: 20vw;
+    height: 10vw;
+    margin-left: 0px;
+    top: auto;
+    bottom: auto;
+    position: relative;
 }
-
-#menu_vert{
-	width: auto;
-	height: auto;
-	position: fixed;
-	z-index: 5;
-	top: 90px;
-	transition: .3s;
-}
-
-#menu_vert ul{
-	display: block;
-	width: 54px;
-	height: auto;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	position: relative;
-}
-#menu_vert ul li a{
-	position: relative;
-	display: block;
-	width: 200px;
-	height: auto;
-	box-sizing: border-box;
-	font-size: 16px;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: rgb(0, 0, 0);
-	line-height: 2em;
-	padding: 10px 15px;
-	background: rgb(182, 208, 215);
-	text-decoration: none;
-	text-shadow: 2px 2px 3px rgb(154, 154, 154);
-}
-#menu_vert ul li a:hover,
-#menu_vert ul li:hover a{
-	background: rgb(182, 208, 215);
-	color: #fff;
+.img_pr img{
+    width: 60vw;
+    height: 40vw;
+    top: 40px;
+    bottom: 40px;
+    margin-left: 50px;
+    float: left;
+    
+    
 }
 footer {
-    background-color: #231f20;
+    background-color: #000000;
     color: white;
-    display: block;
-    height: 10vw;
+    height: 5vw;
     left: 0;
     right: 0;
     bottom: 0;
+    top:100%;
+    position: relative;
+    width: auto;
+    display: flex;
+    
+} 
+.nav {
+  
+    width: 320px;
+    min-width: 320px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+    left: -320px;
+    padding: 15px 20px;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    background: #000;
+   border-color: #fff;
+   border-radius: 3px;
+   z-index: 2000;
+}
+
+.nav-toggle {
+    
     position: absolute;
-    width: 100%;
+    left: 320px;
+    top: 1em;
+    padding: 0.5em;
+    background: inherit;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    z-index: 2000;
 }
 
-.menu_img{
-	transition: .3s;
+
+.nav-toggle:after {
+    content: '\2630';
+    text-decoration: none;
+    position: fixed;
 }
 
-.menu_img:hover{
-	margin-left: 5px;
-	transition: .3s;
+.nav-toggle:hover {
+    color: #ffffff;
+}
+[id='nav-toggle']:checked ~ .nav {
+    left: 0;
+    box-shadow:4px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    -moz-box-shadow:4px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(255, 255, 255, 0.5);
+    overflow-y: auto;
 }
 
-@media screen and (max-width: 1152px){
-
-
-	#menu_vert ul li a{
-		width: 57px;
-		transition: .3s;
-	}
-
-	#menu_vert ul li{
-		width: 57px;
-	}
-
-	span{
-		display: none;
-	}
-
-	.footer{
-		transform: rotate(-90deg);
-		left: -77px;
-		border-right: 1px solid rgb(9, 42, 51);
-		height: 24px;
-		bottom: 77px;
-		padding-left: 11px;
-		padding-bottom: 25px;
-		padding-top: 6px;
-	}
-
-	.menu_img img{
-		height: 40px;
-		margin-left: -7px;
-		margin-top: 9px;
-	}
+.nav > ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-@media screen and (min-width: 1152px){
-	.menu_img img{
-		display: none;
-	}
+.nav > ul > li {
+    line-height: 2.5;
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: opacity .5s .1s, -webkit-transform .5s .1s;
+    -moz-transition: opacity .5s .1s, -moz-transform .5s .1s;
+    -ms-transition: opacity .5s .1s, -ms-transform .5s .1s;
+    transition: opacity .5s .1s, transform .5s .1s;
+}
+
+[id='nav-toggle']:checked ~ .nav > ul > li {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.nav > ul > li > a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #ffffff;
+    width: auto;
+    text-decoration: none;
+    -webkit-transition: color .5s ease, padding .5s ease;
+    -moz-transition: color .5s ease, padding .5s ease;
+    transition: color .5s ease, padding .5s ease;
+}
+.nav > ul > li > a:hover,
+.nav > ul > li > a:focus {
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to bottom,#0000ff 0%, #cc0099 100%);
+    padding-left: 15px;
+}
+.nav > ul > li > a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: auto;
+    background: #ffffff;
+    -webkit-transition: width .5s ease;
+    transition: width .5s ease;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.logo a:hover {
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to bottom,#0000ff 0%, #cc0099 100%);
+}
+/* Форма входа */
+
+  
+  .registration-cssave form {
+    max-width:180px;
+    height: 35.2vw;
+    padding:30px 70px;
+    border-radius:10px;
+    box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color:#fff;
+float: right;
+right: 20px;
+  }
+  
+  .registration-cssave form h3 {
+    font-weight:bold;
+    margin-bottom:30px;
+  }
+  
+  .registration-cssave .item {
+    border-radius:10px;
+    margin-bottom:25px;
+    padding:10px 20px;
+  }
+  
+  .registration-cssave .create-account {
+    border-radius:10px;
+    padding:10px 20px;
+    font-size:18px;
+    font-weight:bold;
+    background-color:#ffffff;
+    color:rgb(0, 0, 0); 
+  }
+  
+
+.map{
+    width:90vw; 
+    height:30vw;
+    border:0; 
+    margin-left: 4vw;
+    
+    justify-items: center;
+    margin-top: 3vw;
+    
+
+}
+h1{
+    font-size: 20;
+    margin-left: 5%;
+    top: 30vw;
+}
+.adress{
+    margin-left: 5vw;
+    font-size: 20px;
+}
+table{
+    
+    font-size:20px ;
+    justify-content: center;
+    
+   margin-top: 3vw;
+   margin-left: 4vw;
+}
+td {
+    text-align: center; 
+   
+   }
+.erm{
+    width: 23vw;
+    height: 23vw;
+}
+.weather{
+    margin-top: 3vw;
+    align-items: center;
 }
