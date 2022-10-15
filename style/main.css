@@ -27,18 +27,6 @@ html, body{
     bottom: auto;
     position: relative;
 }
-/* Подвал */
-footer {
-    background-color: #000000;
-    color: white;
-    height: 15vw;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: relative;
-    text-align: center;
-    
-} 
 
 /* боковая панель навигации */
 .nav {
@@ -289,17 +277,6 @@ p {
     font-size: 20px;
 }
 
-footer table{
-    margin-top: 5vw;
-    font-size:20px ;
-   margin-left: 30vw;
-   margin-bottom: 0;
-}
-footer td{
-    text-align: center; 
-    margin-top: 5vw;
-    border: 1px solid white;
-}
 /* Изображения в таблице */
 .erm{
     width: 23vw;
@@ -335,3 +312,53 @@ footer td{
     margin-right: auto;
     margin-bottom: 20px;
 }
+
+.gallery {
+    width: auto;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin-left: 4vw;
+    margin-bottom: 1vw;
+  }
+  
+  /* карточка картинки */
+  .gallery__card {
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  /* Картинки */
+  .gallery__card__pic {
+    position: relative;
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+    transition: 0.2s;
+  }
+  /* Приближение при наведении */
+  .gallery__card:hover .gallery__card__pic {
+    transform: scale(1.1);
+  }
+  
+  
+  .footer {
+
+    position:relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 90px;
+    background-color: #000000;
+    color: #fff;
+  
+  }
+  .footer-text {
+    margin-top: 2vw;
+    font-size:25px;
+    text-align: center;
+   margin-left: 6vw;
+  }
+
+ 
